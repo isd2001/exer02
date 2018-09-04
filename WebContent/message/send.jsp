@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ include file="/layout/top.jspf"%>
-	<form method="post">
+	<form action="<%= application.getContextPath() %>/sending.jsp" method="post">
 	<p>
 		받을사람(*)<br/>
 		<input type="text" name="receiverid" placeholder="write a receiver" style="width:220px; padding: 5px"/>

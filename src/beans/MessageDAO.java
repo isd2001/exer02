@@ -12,11 +12,10 @@ import java.util.UUID;
 
 public class MessageDAO extends Dao{
 	
-	public int messageroom(String sender,String receiver,String content,Date senddate) {
-		String serial = UUID.randomUUID().toString().split("-")[0];
+	public int messageroom(String serial,String sender,String receiver,String content,Date senddate) {
 		try {
 			Connection conn = DriverManager.getConnection(dburl, dbuser, dbpassword);
-			String sql = "insert into message values(?,?,?,?,?)";
+			String sql = "insert into message(code,sender,receiver,content,senddate) values(?,?,?,?,?)";
 			PreparedStatement ps = conn.prepareStatement(sql);
 			ps.setString(1, serial);
 			ps.setString(2, sender);
@@ -25,7 +24,7 @@ public class MessageDAO extends Dao{
 			ps.setDate(5, senddate);
 			int n =ps.executeUpdate();
 			conn.close();
-			return 1;
+			return n;
 		} catch (Exception e) {
 			e.printStackTrace();
 			return -1;
