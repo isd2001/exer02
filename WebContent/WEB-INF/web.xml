@@ -19,4 +19,17 @@
 		<listener-class>handlers.SessionHandler</listener-class>
 	</listener>
 	
+	<!-- filter -->
+	<filter>
+		<filter-name>f</filter-name>
+		<filter-class>filters.filter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>f</filter-name>
+		<url-pattern>/message/*</url-pattern>
+		<url-pattern>/account/*</url-pattern>
+		<url-pattern>/logout.jsp</url-pattern>
+	</filter-mapping>
+
+	
 </web-app>

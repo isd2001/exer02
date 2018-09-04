@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<% request.setAttribute("key", "mock"); %>
 <%@ include file="/layout/top.jspf"%>
 	<form action="<%= application.getContextPath() %>/sending.jsp" method="post">
 	<p>

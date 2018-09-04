@@ -26,9 +26,19 @@
 			if (log != null) {
 				session.setAttribute("latest", log.get("time"));
 			}
-
 			ldao.addLog(logid);
-			response.sendRedirect(application.getContextPath() + "/");
+			
+			String target=(String)session.getAttribute("target");
+			System.out.println(target);
+			if(target==null){
+				response.sendRedirect(application.getContextPath()+"/");			
+			}else{
+				response.sendRedirect(target);
+			}
+			
+			
+			
+			
 		}
 	}
-%>
+	%>
