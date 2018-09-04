@@ -20,6 +20,7 @@
 			set.add(logid);
 			session.setAttribute("auth", true);
 			session.setAttribute("logid", logid);
+			session.setAttribute("logpass", logpass);
 
 			LoginLogDao ldao = new LoginLogDao();
 			Map log = ldao.getLatesetLogById(logid);

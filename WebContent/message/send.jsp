@@ -1,16 +1,19 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<% request.setAttribute("key", "mock"); %>
+<% request.setAttribute("key", "mock"); 
+	
+
+%>
 <%@ include file="/layout/top.jspf"%>
-	<form action="<%= application.getContextPath() %>/sending.jsp" method="post">
+	<form action="<%= application.getContextPath() %>/message/sending.jsp" method="post">
 	<p>
-		받을사람(*)<br/>
-		<input type="text" name="receiverid" placeholder="write a receiver" style="width:220px; padding: 5px"/>
+		내용(*)<br/>
+		<textarea name="content" style="height: 300px; width: 220px; padding: 5px; resize: none; font-family: inherit;"
+			placeholder="write a message"></textarea>
 	</p>
 	<p>
-		보낼내용(*)<br/>
-		<textarea name="sendmessage" style="height: 300px; width: 220px; padding: 5px; resize: none; font-family: inherit;"
-			placeholder="write a message"></textarea>
+		수신자(*)<br/>
+		<input type="text" name="receiver" placeholder="write a receiver" style="width:220px; padding: 5px"/>
 	</p>
 
 	<button type="submit">메세지 전송</button>

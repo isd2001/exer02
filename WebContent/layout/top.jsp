@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>unknown</title>
+<title>여행</title>
 </head>
 <body style="text-align: center;">
 	<h1>Ubknown Application</h1>

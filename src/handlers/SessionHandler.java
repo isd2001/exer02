@@ -18,6 +18,8 @@ public class SessionHandler implements HttpSessionListener{
 		String id =(String)session.getAttribute("logid");
 		set.remove(id);
 		application.setAttribute("user", set);
+		
+		System.out.println("set > "+set);
 	}
 	
 }

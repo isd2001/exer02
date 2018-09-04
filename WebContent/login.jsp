@@ -2,6 +2,7 @@
     pageEncoding="UTF-8"%>
 <%
 	String mode = request.getParameter("mode");
+	
 %>
 <%@ include file="/layout/top.jspf"%>
 <h3 ><span style="font-size: xx-large;">회원인증</span> | <a href="<%=application.getContextPath()%>/join.jsp">회원가입</a></h3>  

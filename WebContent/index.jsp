@@ -22,6 +22,9 @@
 	<a href="<%=application.getContextPath()%>/logout.jsp"><button type="button">로그아웃</button></a>	
 </p>
 <p>
-	<img src="<%=application.getContextPath()%>/image/main.jpg" style="width: 70%; border-radius: 30px"/>
+	<img src="<%=application.getContextPath()%>/image/1.PNG" style="width: 20%; border-radius: 30px"/>
+	<img src="<%=application.getContextPath()%>/image/2.png" style="width: 20%; border-radius: 30px"/>
+	<img src="<%=application.getContextPath()%>/image/3.PNG" style="width: 20%; border-radius: 30px"/>
+	<img src="<%=application.getContextPath()%>/image/4.PNG" style="width: 20%; border-radius: 30px"/>
 </p>
 <%@ include file="/layout/bottom.jspf"%>

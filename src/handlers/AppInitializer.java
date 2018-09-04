@@ -7,12 +7,12 @@ import javax.servlet.ServletContextEvent;
 import javax.servlet.ServletContextListener;
 
 /*
- * application Event¿ë Listener 2°³ 
+ * application Eventï¿½ï¿½ Listener 2ï¿½ï¿½ 
  *  - ServletContextListener : init, destroy
  *  
  *  - ServletContextAttributeListener : setAttribute, removeAttribute
  * 
- * ¡Ø EventListener´Â µî·ÏÀÌ ÇÊ¿äÇÔ. (ÀÚµ¿À¸·Î µî·ÏµÇÁö ¾Ê´Â´Ù)
+ * ï¿½ï¿½ EventListenerï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ê¿ï¿½ï¿½ï¿½. (ï¿½Úµï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ïµï¿½ï¿½ï¿½ ï¿½Ê´Â´ï¿½)
  * 
  */
 public class AppInitializer implements ServletContextListener {

@@ -3,6 +3,7 @@
 <%
 	response.setStatus(200);
 	String mode = request.getParameter("mode");
+	System.out.println("mode >> "+mode);
 %>
 <%@ include file="/layout/top.jspf"%>
 <h1>비밀번호 변경</h1>  
