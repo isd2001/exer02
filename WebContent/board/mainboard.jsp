@@ -5,10 +5,12 @@
 
 
 
-<form action="<%=application.getContextPath() %>/board/newboard.jsp" method="post" autocomplete="off">
+
 <p>
+	<a href="<%= application.getContextPath() %>/board/newboard.jsp">
 	<button type="submit" style="font-size: 16px; padding: 5px; text-align: right;">글 작성</button>
+	</a>
 </p>
-</form>
+
 
 <%@ include file="/layout/bottom.jspf"%>

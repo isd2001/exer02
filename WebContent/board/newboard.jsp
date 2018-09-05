@@ -3,7 +3,7 @@
 <%@ include file="/layout/top.jspf"%>
 	<h2>새 글</h2>
 
-	<form action="<%=application.getContextPath() %>/board/boardwork.jsp" method="post" enctype="multipart/form-data">
+	<form action="<%=application.getContextPath() %>/board/boardwork.jsp" method="post">
 	<p>
 		<b>작성자</b> 
 		<input type="text" style="font-size: 16px; padding: 5px" name="writer" />
@@ -17,18 +17,12 @@
 		<textarea name="content" style="height: 300px; width: 220px; padding: 5px; resize: none; font-family: inherit;"
 			placeholder="write a message"></textarea>
 	</p>
-	<p>
-		<b> 파일올리기  </b><input type="file" name="attach"/><br/>
-	</p>
-	<p>
-	<button type="submit">글 올리기</button>
-	</p>
-
-
-
-
-
-
 	</form>
+	
+	<form action="<%=application.getContextPath() %>/board/boardwork.jsp" method="post" >
+		<b> 파일올리기  </b><input type="file" name="attach"/><br/>
+	<button type="submit">글 올리기</button>
+	</form>
+
 
 <%@ include file="/layout/bottom.jspf"%>
