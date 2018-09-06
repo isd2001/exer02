@@ -4,32 +4,39 @@
 <%@page import="java.util.*" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ include file="/layout/top.jspf"%>
 <%
-	String writer = request.getParameter("writer");
+	String logid = (String)session.getAttribute("logid");
 	String title = request.getParameter("title");
 	String content = request.getParameter("content");
 	
-	System.out.println("writer>"+writer+"/ title >"+title+"/ content >"+content);
-	
-	
-
 	mybatisDAO dao = new mybatisDAO();
 	Map map = new HashMap();
 	
-	map.put("writer", writer);
+	map.put("logid", logid);
 	map.put("title", title);
 	map.put("content", content);
 	
 	int r=dao.addboardResult(map);
 	
-	out.println(r);
 	if(r==1){
-		out.println("성공");
-		
-	}else{
-		out.println("실패");
+		%>
+		<p style="font-size: 16px; padding: 5px">
+			정상적으로 완료 되었습니다.
+		</p>
+		<%
+	}else{%>
+		<p style="font-size: 16px; padding: 5px">
+			처리 실패 하였습니다. 다시 한번 해주세요.
+		</p>
+		<%
 	}
-	
-	
 	%>	
-
+	<a href="<%= application.getContextPath() %>/board/mainboard.jsp">
+	<button type="submit" style="font-size: 16px; padding: 5px; text-align: center;">게시판목록</button>
+	</a>
+	<a href="<%= application.getContextPath() %>/index.jsp">
+	<button type="submit" style="font-size: 16px; padding: 5px; text-align: center;">메인페이지</button>
+	</a>
+	
+<%@ include file="/layout/bottom.jspf"%>

@@ -15,7 +15,7 @@
 <p style="text-align: right;">
 	〔<b><%=logid %></b>, <small>마지막로그인 : <%=latest==null ? "-": sdf.format(latest) %></small>〕	
 </p>
-<p style="text-align: right;">
+<p style="text-align: center;">
 	<a href="<%=application.getContextPath()%>/board/mainboard.jsp"><button type="button">게시판</button></a>
 	<a href="<%=application.getContextPath()%>/message/mailbox.jsp"><button type="button">메일함</button></a>
 	<a href="<%=application.getContextPath()%>/message/send.jsp"><button type="button">메서지보내기</button></a>
