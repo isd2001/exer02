@@ -2,6 +2,9 @@
 <%@page import="java.util.Map"%>
 <%@page import="beans.mybatisDAO"%>
 <%@page import="java.util.*" %>
+<%@page import="java.io.File"%>
+<%@ page import="com.oreilly.servlet.multipart.Part"%>
+<%@ page import="com.oreilly.servlet.multipart.*" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ include file="/layout/top.jspf"%>
@@ -18,6 +21,9 @@
 	map.put("content", content);
 	
 	int r=dao.addboardResult(map);
+	
+	MultipartParser parser = new MultipartParser(request, 1024*1024*100, true, true, "UTF-8");
+	
 	
 	if(r==1){
 		%>

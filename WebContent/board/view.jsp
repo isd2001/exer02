@@ -16,14 +16,11 @@
 	<p>
 		ERROR 가 발생하였습니다.
 	</p><%}else {%>
-		<p style="text-align: left">
-		<small>#<%=map.get("NO") %></b></small>
-	</p>
 	<p style="text-align: center;">
 		<%=map.get("TITLE") %>
 	</p>
 	<p style="text-align: right;">
-		<small><i>작성자</i> <%=map.get("WRITER") %> / <i>작성일</i> <%=map.get("LEFTDATE") %>  / <i>추천</i> <%=map.get("GOOD") %></small>
+		<small><i>#</i> <%=map.get("NO") %> / <i>작성자</i> <%=map.get("WRITER") %> / <i>작성일</i> <%=map.get("LEFTDATE") %>  / <i>추천</i> <%=map.get("GOOD") %></small>
 	</p>
 	<hr/>
 	<p style="text-align: left; min-height: 300px; font-size: smaller; "> 
@@ -33,8 +30,7 @@
 	<p style="text-align: right;">
 	<a href="<%= application.getContextPath() %>/board/goodwork.jsp">
 	<button type="submit">추천</button></a>
-	</p>
-	<p style="text-align: right;">
+	
 	<a href="<%= application.getContextPath() %>/board/newboard.jsp">
 	<button type="submit">글 쓰 기</button></a>
 	</p>
