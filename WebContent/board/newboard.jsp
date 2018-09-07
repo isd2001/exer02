@@ -8,7 +8,7 @@
 <h2>새 글</h2>
 
 <form action="<%=application.getContextPath() %>/board/boardwork.jsp"
-	method="post" >
+	method="post" enctype="multipart/form-data" >
 	<p>
 		<b>작성자</b> <b style="font-size: 16px; padding: 5px"><%= logid %></b>
 	</p>

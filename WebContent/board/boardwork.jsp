@@ -22,7 +22,7 @@
 	
 	int r=dao.addboardResult(map);
 	
-	MultipartParser parser = new MultipartParser(request, 1024*1024*100, true, true, "UTF-8");
+	
 	
 	
 	if(r==1){
